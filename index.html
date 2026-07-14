@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScanSpark | Clean QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ScanSpark</h1>
+            <p>Generate clean, high-quality QR codes instantly.</p>
+        </header>
+
+        <main class="card">
+            <div class="input-group">
+                <label for="qr-text">URL or Text</label>
+                <input type="text" id="qr-text" placeholder="https://example.com" autocomplete="off">
+            </div>
+
+            <div class="settings-group">
+                <div class="input-group">
+                    <label for="qr-size">Size</label>
+                    <select id="qr-size">
+                        <option value="150x150">Small (150x150)</option>
+                        <option value="300x300" selected>Medium (300x300)</option>
+                        <option value="500x500">Large (500x500)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="generate-btn">Generate QR Code</button>
+
+            <div id="qr-result" class="qr-result hidden">
+                <div class="qr-wrapper">
+                    <img src="" id="qr-image" alt="Generated QR Code">
+                </div>
+                <button id="download-btn" class="btn-secondary">Download Image</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
